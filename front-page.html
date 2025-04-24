@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极客游戏站 | 发现精彩游戏世界</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: rgb(0 0 0/ 0.9);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* 导航栏 */
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center; /* 修改为居中 */
+            align-items: center;
+        }
+
+        /* 主内容区 */
+        .hero {
+            height: 100vh;
+            padding-top: 70px;
+            background: linear-gradient(rgb(0 0 0 /0.7), rgb(0 0 0 /0.7)), 
+                        url('images/game-bg.jpg') center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 游戏展示区 */
+        .featured-games {
+            padding: 4rem 2rem;
+            background: #1a1a1a;
+            text-align: center;
+        }
+
+        .game-grid {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+            gap: 2rem;
+        }
+
+        .game-card {
+            background: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        /* 页脚 */
+        .main-footer {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">GAMEZONE</div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">首页</a>
+                <a href="#games" class="nav-link">游戏库</a>
+                <a href="#about" class="nav-link">关于我们</a>
+                <a href="#contact" class="nav-link">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探索次世代游戏体验</h1>
+            <p>发现最新最热门的游戏作品</p>
+            <button class="cta-button">立即探索</button>
+        }
+        }
+        .game-card {
+            background: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">GAMEZONE</div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">首页</a>
+                <a href="#games" class="nav-link">游戏库</a>
+                <a href="#about" class="nav-link">关于我们</a>
+                <a href="#contact" class="nav-link">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探索次世代游戏体验</h1>
+            <p>发现最新最热门的游戏作品</p>
+            <button class="cta-button">立即探索</button>
+        </div>
+    </section>
+
+    <section class="featured-games">
+        <div class="game-grid">
+            <!-- 游戏卡片示例 -->
+            <div class="game-card">
+                <img src="game1.jpg" alt="赛博纪元" class="game-thumbnail">
+                <div class="game-info">
+                    <h3>赛博纪元</h3>
+                    <p>开放世界赛博朋克角色扮演游戏</p>
+                    <button class="game-button">了解更多</button>
+                </div>
+            </div>
+            <!-- 更多游戏卡片... -->
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2023 GAMEZONE. All rights reserved.</p>
+    </footer>
+</body>
+</html>
