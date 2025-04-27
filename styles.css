@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/spring-bg.jpg') center/cover;
+    color: #fff;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0); 
+        opacity: 1;
+    }
+    50% { 
+        transform: translateY(-20px); 
+        opacity: 0.8;
+    }
+}
+
+.fireworks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.firework {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #ff0;
+    border-radius: 50%;
+    animation: explode 1s ease-out forwards;
+    will-change: transform, opacity;
+    box-shadow: 0 0 5px 2px currentColor;
+}
+
+@keyframes explode {
+    0% { 
+        transform: scale(1); 
+        opacity: 1;
+    }
+    100% { 
+        transform: scale(15); 
+        opacity: 0;
+    }
+}
+
+/* 导航栏 */
+.navbar {
+    background: rgb(0 0 0/ 0.9);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 主内容区 */
+.hero {
+    height: 100vh;
+    padding-top: 70px;
+    background: linear-gradient(rgb(0 0 0 /0.7), rgb(0 0 0 /0.7)), 
+                url('images/game-bg.jpg') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 添加按钮基础样式 */
+.cta-button {
+    padding: 12px 30px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: button;
+    transition: background 0.3s ease;
+}
+
+/* 游戏展示区 */
+.featured-games {
+    padding: 4rem 2rem;
+    background: #1a1a1a;
+    text-align: center;
+}
+
+.game-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 2rem;
+}
+
+.game-card {
+    background: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.game-button {
+    padding: 8px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* 页脚 */
+.main-footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: #000;
+    color: #fff;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
